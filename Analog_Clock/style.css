@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    color: aliceblue; */
+    height: 100vh;
+    background: radial-gradient(circle, rgb(7, 93, 122), rgb(70, 2, 70));
+    /* background:linear-gradient(to right,rgb(1, 4, 20),rgb(3, 3, 56),rgb(3, 3, 136),rgb(3, 3, 56),rgb(1, 4, 20)); */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    color: aliceblue;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.clock {
+    height: 500px;
+    width: 500px;
+    /* background-color: black; */
+    background: linear-gradient(to right, rgb(1, 4, 20), rgb(3, 3, 56), rgb(3, 3, 136), rgb(3, 3, 56), rgb(1, 4, 20));
+
+    /* border: 1px outset silver; */
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    transform: rotate(calc(30deg *var(--n)));
+    position: absolute;
+    inset: 20px;
+    text-align: center;
+}
+
+.number code {
+    transform: rotate(calc(-30deg *var(--n)));
+    display: inline-block;
+    font: bold;
+    font-size: 40px;
+    color: lightblue;
+    text-shadow: 0px 0px 12px rgb(120, 133, 206);
+    font-family: fantasy;
+}
+
+.center {
+    position: absolute;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(2, 2, 46);
+
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    --rotate: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate)*1deg));
+    transform-origin: bottom;
+    border: transparent;
+    border-radius: 3px;
+    border-radius: 70px 70px 3px 3px;
+}
+
+.hour-hand {
+    width: 8px;
+    height: 15vh;
+    /* background-color: aliceblue; */
+    background: linear-gradient(aliceblue, lightblue);
+}
+
+.minute-hand {
+    width: 7px;
+    height: 22vh;
+    background-color: rgb(109, 168, 161);
+    /* background: linear-gradient(rgb(100, 13, 107),red,black);   */
+
+}
+
+.second-hand {
+    width: 5px;
+    height: 23vh;
+    background: linear-gradient(rgb(100, 13, 107), red, black);
+}
+
+.clock::before {
+    content: "";
+    width: 525px;
+    height: 525px;
+    background: radial-gradient(circle, rgb(7, 7, 100), rgb(2, 2, 46));
+    border-radius: 50%;
+    border: 1px groove silver;
+    position: absolute;
+    box-shadow: 0 0 1rem 1rem rgba(2, 2, 34, 0.8);
+    z-index: -1;
+}
