@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, rgb(36, 1, 1), rgb(111, 5, 5), rgb(125, 5, 9), rgb(133, 7, 7), rgb(36, 1, 1));
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(1, 14, 17);
+    color: aliceblue;
+    font-family: cursive;
+    margin-top: 2px;
+    padding: 1rem;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1rem 1rem 3rem rgb(0, 0, 0);
+
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    flex-wrap: wrap;
+    width: 100px;
+
+}
+
+.msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* width: fit-content; */
+}
+
+#msg,
+.score,
+#reset {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /* background: transparent; */
+    font-family: cursive;
+    padding: 1rem;
+    border: none;
+    box-shadow: 1rem 1rem 3rem rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+#reset {
+    margin-top: 10px;
+}
